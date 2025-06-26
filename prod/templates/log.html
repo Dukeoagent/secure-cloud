@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Log - Secure File Share</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        .log-container {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 800px;
+            margin: 2rem auto;
+        }
+
+        .log-title {
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
+        .log-entry {
+            border-bottom: 1px solid #eee;
+            padding-bottom: 0.8rem;
+            margin-bottom: 0.8rem;
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        .log-entry:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Secure File Share</div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About Us</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+                <li><a href="{{ url_for('history') }}">History</a></li>
+                <li><a href="{{ url_for('log_page') }}">Log</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="log-container">
+            <h2 class="log-title">Activity Log</h2>
+            {% if logs %}
+                {% for log in logs %}
+                    <p class="log-entry">{{ log }}</p>
+                {% endfor %}
+            {% else %}
+                <p>No activity logged yet.</p>
+            {% endif %}
+        </div>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2025 Secure File Share</p>
+    </footer>
+</body>
+</html>

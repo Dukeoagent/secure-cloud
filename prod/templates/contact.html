@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Secure File Share</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <header>
+        <div class="logo">Secure File Share</div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About Us</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+                <li><a href="{{ url_for('history') }}">History</a></li>
+                <li><a href="{{ url_for('log_page') }}">Log</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="form-container">
+            <h2 class="form-title">Contact Us</h2>
+            <p>Have questions or need assistance? Please feel free to reach out to us using the form below.</p>
+            <form class="form">
+                <div class="form-group">
+                    <label for="name" class="form-label">Your Name:</label>
+                    <input type="text" id="name" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="form-label">Your Email:</label>
+                    <input type="email" id="email" class="form-input" required>
+                </div>
+                <div class="form-group">
+                    <label for="message" class="form-label">Message:</label>
+                    <textarea id="message" class="form-input" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="primary-button button">Send Message</button>
+                <p class="form-status">Note: This form is for demonstration purposes only and does not actually send emails.</p>
+            </form>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2025 Secure File Share</p>
+    </footer>
+</body>
+</html>

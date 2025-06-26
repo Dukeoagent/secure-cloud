@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Secure File Share</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <header>
+        <div class="logo">Secure File Share</div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About Us</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+                <li><a href="{{ url_for('history') }}">History</a></li>
+                <li><a href="{{ url_for('log_page') }}">Log</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="content-container">
+            <h1>About Secure File Share</h1>
+            <p>Secure File Share is dedicated to providing a safe and reliable platform for encrypting and transmitting your important documents. We understand the need for privacy and security in today's digital world, and our goal is to empower you with tools to protect your sensitive information.</p>
+
+            <h2>Our Mission</h2>
+            <p>To make secure file sharing accessible and user-friendly for everyone, without compromising on the highest standards of encryption and data protection.</p>
+
+            <h2>Our Technology</h2>
+            <p>We utilize a combination of robust encryption techniques to ensure the confidentiality and integrity of your files during transmission. Your files are encrypted before they leave your device and remain protected until they are securely decrypted by the intended recipient.</p>
+
+            <h2>Our Commitment</h2>
+            <p>We are committed to continuous improvement and staying ahead of evolving security threats. Our team is constantly working to enhance our platform and provide you with the best possible secure file sharing experience.</p>
+
+            <p>Thank you for trusting Secure File Share with your secure file transmission needs.</p>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2025 Secure File Share</p>
+    </footer>
+</body>
+</html>

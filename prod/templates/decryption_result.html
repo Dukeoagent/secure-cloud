@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decryption Successful - Secure File Share</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">Secure File Share</div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About Us</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+                <li><a href="{{ url_for('history') }}">History</a></li>
+                <li><a href="{{ url_for('log_page') }}">Log</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="content-container">
+            <h1>Decryption Successful!</h1>
+            <p>The encrypted file <strong>{{ filename }}</strong> has been successfully decrypted.</p>
+            <p><a href="{{ decrypted_file_url }}" class="primary-button button">Download Decrypted File</a></p>
+            <p><a href="{{ url_for('receiver') }}">Decrypt Another File</a></p>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2025 Secure File Share</p>
+    </footer>
+</body>
+</html>

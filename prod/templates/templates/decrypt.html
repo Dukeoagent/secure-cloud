@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure File Transmission - Receive</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">Secure File Share</div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About Us</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+                <li><a href="{{ url_for('history') }}">History</a></li>
+                <li><a href="{{ url_for('log_page') }}">Log</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="form-container">
+            <h2 class="form-title">Securely Receive and Decrypt File</h2>
+            <form method="POST" action="{{ url_for('decrypt') }}" enctype="multipart/form-data" class="form">
+                <div class="form-group">
+                    <label for="encrypted_file" class="form-label">Select Encrypted File:</label>
+                    <input type="file" name="encrypted_file" id="encrypted_

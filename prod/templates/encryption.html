@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encryption Successful - Secure File Share</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">Secure File Share</div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About Us</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+                <li><a href="{{ url_for('history') }}">History</a></li>
+                <li><a href="{{ url_for('log_page') }}">Log</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="content-container">
+            <h1>Encryption Successful!</h1>
+            <p>Your file <strong>{{ filename }}</strong> has been successfully encrypted.</p>
+            <p>Please download the encrypted file and the encrypted password file below and securely share the password with the recipient.</p>
+            <ul>
+                <li><a href="{{ encrypted_file_url }}" class="primary-button button">Download Encrypted File</a></li>
+                <li><a href="{{ encrypted_password_url }}" class="primary-button button">Download Encrypted Password</a></li>
+            </ul>
+            <p class="note"><strong>Important:</strong> Ensure you transmit the password to the recipient through a secure channel (separate from how you send the encrypted files).</p>
+            <p><a href="{{ url_for('sender') }}">Encrypt and Send Another File</a></p>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2025 Secure File Share</p>
+    </footer>
+</body>
+</html>
